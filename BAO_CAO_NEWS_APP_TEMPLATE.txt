@@ -1,0 +1,98 @@
+BÁO CÁO BÀI THI
+XÂY DỰNG ỨNG DỤNG QUẢN LÝ TIN TỨC CÁ NHÂN (NEWS APP)
+
+1. THÔNG TIN SINH VIÊN
+- Họ và tên: ...............................................................
+- MSSV: ....................................................................
+- Lớp: .....................................................................
+- Môn học: ..................................................................
+- Giảng viên: ...............................................................
+- Ngày nộp: ...... / ...... / 2026
+
+2. MÔ TẢ ĐỀ TÀI
+Ứng dụng News App được xây dựng bằng Flutter, cho phép người dùng:
+- Xem danh sách bài viết từ API.
+- Xem chi tiết bài viết.
+- Tìm kiếm bài viết theo tiêu đề.
+- Lưu danh sách yêu thích.
+- Làm mới dữ liệu bằng Pull-to-refresh.
+- Chuyển giao diện sáng/tối trong phần Cài đặt.
+
+3. CÔNG NGHỆ VÀ KIẾN TRÚC SỬ DỤNG
+3.1. Ngôn ngữ và framework
+- Flutter (Dart)
+
+3.2. Thư viện sử dụng
+- provider: Quản lý trạng thái ứng dụng.
+- http: Gọi API.
+- intl: Định dạng ngày giờ.
+- html_unescape: Xử lý nội dung HTML trả về từ API.
+
+3.3. Kiến trúc code
+- Áp dụng mô hình Clean Architecture cơ bản:
+  + Model: Dữ liệu bài viết, danh mục.
+  + View: Giao diện các màn hình.
+  + ViewModel: Xử lý logic hiển thị và trạng thái.
+  + Repository/Service: Tầng làm việc với API.
+
+4. GIẢI THÍCH NGẮN GỌN VỀ QUẢN LÝ TRẠNG THÁI (PROVIDER)
+Trong bài làm, em sử dụng Provider kết hợp ChangeNotifier để quản lý trạng thái.
+- NewsViewModel chịu trách nhiệm:
+  + Tải danh sách tin tức và danh mục.
+  + Tìm kiếm theo tiêu đề.
+  + Lọc bài theo danh mục.
+  + Quản lý danh sách yêu thích.
+  + Trạng thái loading và lỗi.
+- AppSettingsViewModel chịu trách nhiệm:
+  + Quản lý chế độ giao diện sáng/tối.
+Khi dữ liệu thay đổi, notifyListeners() được gọi để tự động cập nhật giao diện tương ứng.
+
+5. CÁC CHỨC NĂNG ĐÃ HOÀN THÀNH
+5.1. Màn hình Welcome
+- Hiển thị trang chào mừng trước khi vào ứng dụng.
+- Có nút “Bắt đầu đọc tin”.
+
+[CHÈN ẢNH MÀN HÌNH WELCOME Ở ĐÂY]
+
+5.2. Màn hình Home (Danh sách tin tức)
+- Hiển thị danh sách bài viết từ API.
+- Mỗi item có: ảnh, tiêu đề, mô tả tóm tắt, ngày đăng, danh mục.
+- Có thanh tìm kiếm theo tiêu đề.
+- Có chip lọc theo danh mục.
+- Hỗ trợ Pull-to-refresh.
+
+[CHÈN ẢNH MÀN HÌNH HOME Ở ĐÂY]
+
+5.3. Màn hình Chi tiết tin tức
+- Hiển thị nội dung đầy đủ bài viết.
+- Có nút Yêu thích/Bỏ yêu thích.
+
+[CHÈN ẢNH MÀN HÌNH DETAIL Ở ĐÂY]
+
+5.4. Màn hình Yêu thích
+- Hiển thị danh sách bài viết đã đánh dấu yêu thích.
+
+[CHÈN ẢNH MÀN HÌNH FAVORITES Ở ĐÂY]
+
+5.5. Màn hình Cài đặt
+- Bật/tắt chế độ sáng/tối.
+
+[CHÈN ẢNH MÀN HÌNH SETTINGS Ở ĐÂY]
+
+5.6. Xử lý lỗi và trải nghiệm người dùng
+- Hiển thị CircularProgressIndicator khi đang tải dữ liệu.
+- Hiển thị SnackBar khi lỗi kết nối API hoặc lỗi mạng.
+
+[CHÈN ẢNH LOADING / ERROR Ở ĐÂY]
+
+6. LINK SẢN PHẨM NỘP
+- Link Github (source code): .................................................
+- Link video demo (Youtube/Drive): ..........................................
+
+7. CAM KẾT
+Em cam kết bài làm do chính em thực hiện, không sao chép mã nguồn từ các bài mẫu có sẵn trên mạng. Nếu vi phạm, em xin hoàn toàn chịu trách nhiệm theo quy định môn học.
+
+Sinh viên thực hiện
+(Ký và ghi rõ họ tên)
+
+...............................................................
